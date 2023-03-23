@@ -12,6 +12,7 @@
 //   this.items = items;
 // };
 
+
 // // TODO: Fill in this instance method to create a new CartItem and add it to this.items
 // Cart.prototype.addItem = function(product, quantity) {
 //   // Create a new CartItem object with the provided product and quantity
@@ -37,6 +38,30 @@
 //     });
 //   };
   
+
+Cart.prototype.addItem = function(product, quantity) {
+  // TODO: Fill in this instance method to create a new CartItem and add it to this.items
+  const item = new CartItem(product, quantity);
+  this.items.push(item);
+};
+
+
+Cart.prototype.saveToLocalStorage = function() {
+  // TODO: Fill in this instance method to save the contents of the cart to localStorage
+  localStorage.setItem('cart', JSON.stringify(this.items));
+};
+
+Cart.prototype.removeItem = function(item) {
+  // TODO: Fill in this instance method to remove one item from the cart.
+  const index = this.items.indexOf(item);
+  this.items.splice(index, 1);
+};
+Cart.prototype.updateCounter = function() {
+  // TODO: Update the cart count in the header nav with the number of items in the Cart
+  const countElement = document.getElementById('itemCount');
+  countElement.textContent = this.items.length;
+};
+
 
 // // TODO: Update the cart count in the header nav with the number of items in the Cart
 //   Cart.prototype.updateCounter = function() {
