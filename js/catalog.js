@@ -18,15 +18,16 @@ function populateForm() {
     selectElement.appendChild(optionElement);
   }
 
+
 }
+
 
 // When someone submits the form, we need to add the selected item to the cart
 // object, save the whole thing back to local storage and update the screen
 // so that it shows the # of items in the cart and a quick preview of the cart itself.
 function handleSubmit(event) {
 
-  // Prevent the page from reloading
-  event.preventDefault();
+  // TODO: Prevent the page from reloading
 
   // Do all the things ...
   addSelectedItemToCart();
@@ -36,26 +37,17 @@ function handleSubmit(event) {
 
 }
 
-// Add the selected item and quantity to the cart
+// TODO: Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
-  // Suss out the item picked from the select list
-  const selectedItem = document.getElementById('items').value;
-  // Get the quantity
-  const selectedQuantity = parseInt(document.getElementById('quantity').value);
-  // Using those, add one item to the Cart
-  state.cart.addItem(selectedItem, selectedQuantity);
+  // TODO: suss out the item picked from the select list
+  // TODO: get the quantity
+  // TODO: using those, add one item to the Cart
 }
 
-// As you add items into the cart, show them (item & quantity) in the cart preview div
+// TODO: As you add items into the cart, show them (item & quantity) in the cart preview div
 function updateCartPreview() {
-  // Get the item and quantity from the form
-  const selectedItem = document.getElementById('items').value;
-  const selectedQuantity = parseInt(document.getElementById('quantity').value);
-  // Add a new element to the cartContents div with that information
-  const cartContentsElement = document.getElementById('cartContents');
-  const newCartItemElement = document.createElement('p');
-  newCartItemElement.textContent = `${selectedItem} x ${selectedQuantity}`;
-  cartContentsElement.appendChild(newCartItemElement);
+  // TODO: Get the item and quantity from the form
+  // TODO: Add a new element to the cartContents div with that information
 }
 
 // Set up the "submit" event listener on the form.
