@@ -9,11 +9,15 @@ state.cart = new Cart([]);
 // (the things in the state.allProducts array) into the drop down list.
 function populateForm() {
 
-  //TODO: Add an <option> tag inside the form's select for each product
+  // Add an <option> tag inside the form's select for each product
   const selectElement = document.getElementById('items');
   for (let i in state.allProducts) {
-
+    const optionElement = document.createElement('option');
+    optionElement.value = state.allProducts[i].name;
+    optionElement.textContent = state.allProducts[i].name;
+    selectElement.appendChild(optionElement);
   }
+
 
 }
 
