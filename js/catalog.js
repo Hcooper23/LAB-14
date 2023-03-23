@@ -45,7 +45,6 @@ function handleSubmit(event) {
 
 }
 
-
 // Add the selected item and quantity to the cart
 function addSelectedItemToCart() {
   // Suss out the item picked from the select list
