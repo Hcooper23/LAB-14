@@ -55,12 +55,16 @@ function updateCartPreview() {
   // Get the item and quantity from the form
   const selectedItem = document.getElementById('items').value;
   const selectedQuantity = parseInt(document.getElementById('quantity').value);
+  const selectedProduct = state.allProducts.find(product => product.name === selectedItem);
+
   // Add a new element to the cartContents div with that information
   const cartContentsElement = document.getElementById('cartContents');
   const newCartItemElement = document.createElement('p');
-  newCartItemElement.textContent = `${selectedItem} x ${selectedQuantity}`;
+  newCartItemElement.innerHTML = `<img src="${selectedProduct.filePath}" alt="${selectedProduct.name}" width="50px" height="50px"> ${selectedItem} x ${selectedQuantity}`;
   cartContentsElement.appendChild(newCartItemElement);
 }
+
+
 
 // Set up the "submit" event listener on the form.
 // This is the trigger for the app. When a user "submits" the form, it will
