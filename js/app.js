@@ -65,9 +65,10 @@ Cart.prototype.updateCounter = function() {
 
 // TODO: Update the cart count in the header nav with the number of items in the Cart
   Cart.prototype.updateCounter = function() {
-    const cartCountEl = document.querySelector('itemCounter');
-    const itemCount = this.items.length; 
-    cartCountEl.textContent = itemCount;
+    const countElement = document.getElementById('itemCount');
+    countElement.textContent = this.items.length;
+    // const itemCount = this.items.length; 
+    // cartCountEl.textContent = itemCount;
   }
 
 
