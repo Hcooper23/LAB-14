@@ -68,7 +68,6 @@ function updateCartPreview() {
   cartContentsElement.appendChild(newCartItemElement);
 }
 
-
 // Set up the "submit" event listener on the form.
 // This is the trigger for the app. When a user "submits" the form, it will
 // Call that handleSubmit method above and kick off the whole process
