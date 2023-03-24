@@ -57,7 +57,7 @@ function showCart() {
 
     // Create a table cell element for the item name
     const itemTd = document.createElement('td');
-    itemTd.textContent = item.product.name;
+    itemTd.textContent = item.product;
 
     // Add each table cell element to the table row, and add the table row to the table body
     tr.appendChild(deleteTd);
